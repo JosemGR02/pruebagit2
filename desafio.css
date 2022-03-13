@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    font-size: 2rem;
+}
+.padre{
+    width: 90%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: repeat(3 1fr);
+    grid-template-areas:
+    "header header header"
+    "prod extras aside"
+    "footer footer footer";
+}
+.hijos{
+    margin: 5px;
+    padding: 5px;
+    border-radius: 3px;
+    width: auto;
+    height: auto;
+}
+.header{
+    background-color: blue;
+    grid-area: header;
+}
+.prod{
+    background-color: blueviolet;
+    grid-area: prod;
+}
+.extras{
+    background-color: gray;
+    grid-area: extras;
+}
+.aside{
+    background-color: red;
+    grid-area:aside ;
+}
+.footer{
+    background-color: green;
+    grid-area: footer;
+}

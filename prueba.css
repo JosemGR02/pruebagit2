@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:rgb(204, 230, 59) ;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+}
+.contenedor{
+    background-color: white;
+    width: 90%;
+    height: 80vh;
+    margin: 20px auto;
+    
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(2 1fr);
+    gap: 10px;
+}
+.hijo{
+    background-color: rgb(255, 8, 0);
+    font-size: 2rem;
+    text-align: center;
+}
+@media  screen and(max-width:760px) {
+    .contenedor{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+}
+@media screen and(max-width: 500px){
+    .contenedor{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8 1fr);
+    }
+}

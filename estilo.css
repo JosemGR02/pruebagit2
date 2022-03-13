@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:aquamarine ;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+}
+.contenedor{
+    background-color: white;
+    width: 90%;
+    height: 80vh;
+    border: solid black 3px;
+    font-size: 2rem;
+    text-align: center;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr ;
+    grid-template-rows: repeat(2 1fr);
+    gap: 10px;
+    grid-template-areas:
+    "ab ab c"
+    "d ef ef";
+}
+.hijo{
+    background-color: aqua;
+    border: 2px solid yellow;
+}
+.ab{
+    background-color: coral;
+    grid-area: ab;
+}
+.ef{
+    background-color: blueviolet;
+    grid-area: ef;
+}
+.c{
+    background-color: chartreuse;
+}
+.d{
+    background-color: fuchsia;
+}
+@media screen and (max-width:760px) {
+    .contenedor{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4 1fr);
+        grid-template-areas: "ab" 
+        "c"
+        "d" 
+        "ef";
+    }
+}
